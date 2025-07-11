@@ -41,7 +41,7 @@ class LegalChatbotOrchestrator:
             # File paths
             "input_file": "sample_text.txt",
             "output_embeddings_file": "sample_embeddings.npy",
-            "chroma_db_directory": "./chroma_db",
+            "chroma_db_directory": "./Sample_chroma_db",
             
             # Text processing
             "chunk_size": 1000,
@@ -51,7 +51,7 @@ class LegalChatbotOrchestrator:
             "embedding_model": "law-ai/InLegalBERT",
             
             # ChromaDB settings
-            "collection_name": "legal_documents",
+            "collection_name": "sample_documents",
             "batch_size": 1000,
             
             # LLM settings
