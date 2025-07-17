@@ -28,7 +28,7 @@ def save_chat_history(chat_id, messages):
     data = load_chat_history()
     data[chat_id] = messages
     with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+       json.dump(data, f, indent=2, ensure_ascii=False)
 
 def delete_chat(chat_id):
     data = load_chat_history()
@@ -43,7 +43,7 @@ def download_chat(chat_id):
         return json.dumps(data[chat_id], indent=2, ensure_ascii=False)
     return ""
 
-# === Sidebar: Model Customization ===
+# ===  Sidebar: Model Customization ===
 # st.sidebar.title("⚖️ Legalysis")
 
 if st.sidebar.button("➕ New Chat"):
@@ -57,8 +57,6 @@ with st.sidebar.expander("⚙️ Model Customizations", expanded=False):
     top_k = st.slider("Top-k Documents", 1, 10, 4)
 
 show_sources = st.sidebar.checkbox("Show Source Documents", value=True)
-
-
 
 # === Load chatbot ===
 @st.cache_resource(show_spinner="Loading retriever and LLM...")
