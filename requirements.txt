@@ -9,3 +9,5 @@ numpy
 python-dotenv
 streamlit
 pysqlite3-binary==0.5.1
+pymupdf
+docx2txt

@@ -98,31 +98,3 @@ Document:
         temperature=0.3
     )
     return prompt | llm
-
-# # --- Streamlit App ---
-# st.set_page_config(page_title="DocIntel", layout="centered")
-# st.title("📄 DocIntel")
-# st.subheader("Unlock insights from your documents — summarize and quiz with AI.")
-
-# uploaded_file = st.file_uploader("Upload your document (PDF, DOCX, or TXT)", type=["pdf", "docx", "txt"])
-
-# with st.expander("Customize Options"):
-#     summary_style = st.selectbox("Summary Style", ["bullet", "paragraph", "both"], index=0)
-#     summary_length = st.slider("Number of summary points/paragraphs", min_value=1, max_value=15, value=7)
-
-# if uploaded_file and st.button("Generate"):
-#     with st.spinner("Processing your document..."):
-#         try:
-#             docs = load_document(uploaded_file)
-#             full_text = "\n".join([doc.page_content for doc in docs])
-#             input_data = {"content": full_text, "num_points": summary_length}
-#             summary_chain = get_summary_chain(style=summary_style)
-#             summary_result = summary_chain.invoke(input_data)
-#             st.markdown("### Summary")
-#             text = summary_result.content if hasattr(summary_result, "content") else str(summary_result)
-#             st.markdown(
-#                 f"<div style='color: #F0F0F0; font-size: 16px; line-height: 1.6; white-space: pre-wrap;'>{text}</div>",
-#                 unsafe_allow_html=True
-#             )
-#         except Exception as e:
-#             st.error(f" An error occurred: {e}")
