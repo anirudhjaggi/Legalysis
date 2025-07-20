@@ -73,5 +73,41 @@
       "num_sources": 4
     }
   ],
-  "20250720184056": []
+  "20250721020128": [
+    {
+      "question": "What all IPC laws will be applied for murders?",
+      "answer": "Based on the provided text, the primary IPC sections relevant to murder are:\n\n1. **Section 299 (Culpable Homicide):** This section defines culpable homicide, which is a broader category encompassing acts causing death.  The provided text highlights that understanding this section is crucial to distinguishing it from murder.\n\n2. **Section 300 (Murder):** This section defines murder, specifying that it's a type of culpable homicide committed under certain circumstances, including with the intention of causing death.  The text emphasizes the importance of understanding the key words in this section and Section 299 to differentiate between the two.\n\n3. **Section 302 (Punishment for Murder):** While not explicitly defined in the provided text, general knowledge of Indian law dictates that Section 302 prescribes the punishment for murder, which can range from life imprisonment to the death penalty.  The provided text discusses factors considered when deciding between these punishments (aggravating and mitigating circumstances).\n\n4. **Section 364A (Kidnapping for ransom):**  While not directly related to *all* murders, this section is relevant if the murder is committed in conjunction with kidnapping for ransom.  The provided text explains that this section was added to address the inadequacy of existing laws in dealing with such crimes.\n\n\n**Explanation:**\n\nThe provided text focuses on the distinction between culpable homicide and murder, emphasizing the need for careful interpretation of Sections 299 and 300.  The decision on the appropriate punishment under Section 302 (life imprisonment or death penalty) involves a complex balancing of aggravating and mitigating circumstances, as discussed in the excerpts from case law.  Section 364A becomes relevant if the murder is connected to kidnapping for ransom.\n\n\n**Caveats / Additional Notes:**\n\n* This answer is based solely on the provided text and general knowledge of the IPC.  The application of these sections to a specific case depends on the facts and circumstances.\n* This information is for educational purposes only and does not constitute legal advice.  For any legal matter, it is crucial to consult with a qualified legal professional in India.\n*  Other IPC sections might be applicable depending on the specifics of the murder case (e.g., sections related to conspiracy, weapons used, etc.).  The provided text does not cover the full range of potentially relevant sections.\n",
+      "sources": [
+        {
+          "content": "The academic distinction between 'murder' and 'culpable homicide not amounting to murder' has vexed the Courts for more than a century. The confusion is caused, if Courts losing sight of the true scope and meaning of the terms used by the legislature in these sections allow themselves to be drawn into minute abstractions. The safest way of approach to the interpretation and application of these provisions seems to be keeping in focus the key words used in the various clauses of sections 299 and 300. The following comparative table will be helpful in appreciating the points of distinction between the two offences.\nSection 299\tSection 300\nA person commits culpable homicide if the act Subject to certain exceptions, culpable\nby which the death is caused is done -\nINTENTION\nhomicide is murder if the act by which the death is caused is done -\n(a) with the intention of causing death; or\t(1) with the intention of causing death; or",
+          "metadata": {
+            "id": "doc_2578",
+            "score": 28.571224212646484
+          }
+        },
+        {
+          "content": "The cardinal questions to be asked and answered are:—\n(a) Is there something uncommon about the crime which renders sentence of imprisonment for life inadequate and calls for a death sentence?\n(b) Are the circumstances of the crime such that there is no alternative but to impose death sentence even after according maximum weightage to the mitigating circumstances which speak in favour of the offender?\nIf after taking into consideration all these circumstances, it is felt that death sentence is warranted, the Court would proceed to do so.216. Thus, where murder is premeditated217. or is committed in an organised manner,218. or by a hired assassin219. or by a lawyer220. or where it is gruesome221. or is committed with utmost depravity,222. death sentence seems to be the proper sentence in all such cases.\n[s 302.8] Need for flexibility.—",
+          "metadata": {
+            "id": "doc_2813",
+            "score": 28.607707977294922
+          }
+        },
+        {
+          "content": "Ramnaresh v State of Chhattisgarh;214. Brajendra Singh v State of MP.215.\n[s 302.7] Considerations for or against death sentence.—Balance sheet of aggravating and mitigating factors.—\nBoth in Bachan Singh and Machhi Singh's cases, guidelines have been indicated by the Supreme Court as to when this extreme sentence should be awarded and when not. In fine, a balance-sheet of aggravating and mitigating circumstances has to be drawn up and in doing so the mitigating circumstances have to be accorded full weightage and a just balance has to be struck between the aggravating and mitigating circumstances before the option is exercised to award one sentence or the other.\nThe cardinal questions to be asked and answered are:—\n(a) Is there something uncommon about the crime which renders sentence of imprisonment for life inadequate and calls for a death sentence?",
+          "metadata": {
+            "id": "doc_2812",
+            "score": 29.06586265563965
+          }
+        },
+        {
+          "content": "COMMENT.—\nIt is relevant to point out that section 364A had been introduced in the IPC, 1860 by virtue of Amendment Act 42 of 1993. The statement of objects and reasons are as follows:\nStatement of Objects and Reasons. - Kidnappings by terrorists for ransom, for creating panic amongst the people and for securing release of arrested associates and cadres have assumed serious dimensions. The existing provisions of law have proved to be inadequate as deterrence. The Law Commission in its 42nd Report has also recommended a specific provision to deal with this menace. It [was] necessary to amend the Indian Penal Code to provide for deterrent punishment to persons committing such acts and to make consequential amendments to the Code of Criminal Procedure, 1973.",
+          "metadata": {
+            "id": "doc_3502",
+            "score": 29.1639404296875
+          }
+        }
+      ],
+      "num_sources": 4
+    }
+  ]
 }
