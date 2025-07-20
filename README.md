@@ -9,19 +9,19 @@
 ### 📄 Document Upload & Summarization
 - Supports **PDF, DOCX, and TXT** formats.
 - Extracts:
-  - 🔹 Case Summary
-  - 🔹 Parties Involved
-  - 🔹 Key Legal Dates
-  - 🔹 IPC Sections and Statutes
-  - 🔹 Obligations and Rights
+  🔹 Case Summary
+  🔹 Parties Involved
+  🔹 Key Legal Dates
+  🔹 IPC Sections and Statutes
+  🔹 Obligations and Rights
 
 ### 💬 Chat with Legal Documents (RAG-based)
 - Ask natural language questions.
 - Responses include:
-  - 🔹 Legal reasoning
-  - 🔹 Relevant IPC sections
-  - 🔹 Citations (optional toggle)
-  - 🔹 Actionable summaries
+  🔹 Legal reasoning
+  🔹 Relevant IPC sections
+  🔹 Citations (optional toggle)
+  🔹 Actionable summaries
 
 ### 🛠️ Model Customization
 - Adjustable parameters:
