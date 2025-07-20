@@ -1,6 +1,7 @@
 import streamlit as st
 from Utils.Retriever import Retriever
 from Utils.LLM import RAGChatbot
+from Utils.Summary import load_document, get_summary_chain
 from dotenv import load_dotenv
 import os
 import json
@@ -28,7 +29,7 @@ def save_chat_history(chat_id, messages):
     data = load_chat_history()
     data[chat_id] = messages
     with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as f:
-       json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 def delete_chat(chat_id):
     data = load_chat_history()
@@ -43,20 +44,33 @@ def download_chat(chat_id):
         return json.dumps(data[chat_id], indent=2, ensure_ascii=False)
     return ""
 
-# ===  Sidebar: Model Customization ===
-# st.sidebar.title("⚖️ Legalysis")
-
-if st.sidebar.button("➕ New Chat"):
+# === Sidebar: Chat + Summarization ===
+if st.sidebar.button("✙ New Chat"):
     st.session_state.chat_id = datetime.now().strftime("%Y%m%d%H%M%S")
     st.session_state.chat_history = []
+    st.session_state.pop("doc_summary", None)
     save_chat_history(st.session_state.chat_id, [])
 
 with st.sidebar.expander("⚙️ Model Customizations", expanded=False):
     temperature = st.slider("Creativity (Temperature)", 0.0, 1.0, 0.5, 0.1)
     max_tokens = st.number_input("Max Tokens", min_value=100, max_value=10000, value=1000, step=100)
     top_k = st.slider("Top-k Documents", 1, 10, 4)
+    show_sources = st.checkbox("Show Source Documents", value=True)
 
-show_sources = st.sidebar.checkbox("Show Source Documents", value=True)
+# === Document Summarization Inputs in Dropdown ===
+with st.sidebar.expander("📑 Summarize Document", expanded=False):
+    sum_file = st.file_uploader("Upload document (PDF, DOCX, TXT)", type=["pdf", "docx", "txt"])
+    if sum_file and st.button("Generate Summary"):
+        with st.spinner("Generating summary..."):
+            try:
+                docs = load_document(sum_file)
+                full_text = "\n".join([doc.page_content for doc in docs])
+                input_data = {"content": full_text}
+                summary_chain = get_summary_chain()  # no style or num_points needed
+                result = summary_chain.invoke(input_data)
+                st.session_state.doc_summary = result.content if hasattr(result, "content") else str(result)
+            except Exception as e:
+                st.session_state.doc_summary = f"❌ Error: {e}"
 
 # === Load chatbot ===
 @st.cache_resource(show_spinner="Loading retriever and LLM...")
@@ -78,17 +92,13 @@ chatbot = load_chatbot()
 
 # === Chat Session State ===
 history_data = load_chat_history()
-
 if "chat_id" not in st.session_state:
     st.session_state.chat_id = str(uuid.uuid4())
     st.session_state.chat_history = []
 
 # === Sidebar Chat History ===
-
-st.sidebar.subheader("\n\nChat History")
-
-search_query = st.sidebar.text_input("🔍 Search Chats")
-
+st.sidebar.subheader("Chats")
+search_query = st.sidebar.text_input("🔍︎ Search Chats")
 for cid, messages in sorted(history_data.items(), reverse=True):
     if not messages:
         continue
@@ -102,48 +112,31 @@ for cid, messages in sorted(history_data.items(), reverse=True):
         if col1.button(label, key=f"load_{cid}"):
             st.session_state.chat_id = cid
             st.session_state.chat_history = messages
-        
         with col2:
-            if st.button("🗑️", key=f"del_{cid}"):
+            if st.button("✖", key=f"del_{cid}"):
                 delete_chat(cid)
                 st.rerun()
-
-    # with st.sidebar.container():
-    #     label = f"{title}"
-    #     col1, col2, col3 = st.sidebar.columns([8, 2, 2])
-    #     if col1.button(label, key=f"load_{cid}"):
-    #         st.session_state.chat_id = cid
-    #         st.session_state.chat_history = messages
-    #     with col2:
-    #         st.download_button("⬇️", data=download_chat(cid),
-    #                            file_name=f"chat_{cid}.json",
-    #                            mime="application/json", key=f"download_{cid}")
-    #     with col3:
-    #         if st.button("🗑️", key=f"del_{cid}"):
-    #             delete_chat(cid)
-    #             st.rerun()
-
-
 
 # === Main UI ===
 st.title("⚖️ Legalysis - Indian Law Assistant")
 st.markdown("Ask your legal questions based on the Indian Penal Code (IPC) and get structured AI-backed answers using Gemini.")
 
-user_input = st.chat_input("Ask a legal question about IPC...")
-
-if user_input:
-    with st.spinner("Thinking..."):
-        response = chatbot.query(user_input, k=top_k)
-        message = {
-            "question": user_input,
-            "answer": response["answer"],
-            "sources": response["sources"],
-            "num_sources": response["num_sources"]
-        }
-        st.session_state.chat_history.append(message)
-        save_chat_history(st.session_state.chat_id, st.session_state.chat_history)
-
 # === Display Chat Messages ===
+if "doc_summary" not in st.session_state:
+    user_input = st.chat_input("Ask a legal question about IPC...")
+    if user_input:
+        with st.spinner("Thinking..."):
+            response = chatbot.query(user_input, k=top_k)
+            message = {
+                "question": user_input,
+                "answer": response["answer"],
+                "sources": response["sources"],
+                "num_sources": response["num_sources"]
+            }
+            st.session_state.chat_history.append(message)
+            save_chat_history(st.session_state.chat_id, st.session_state.chat_history)
+
+
 for chat in st.session_state.chat_history:
     st.chat_message("user", avatar="🧑").write(chat["question"])
     st.chat_message("assistant", avatar="🤖").write(chat["answer"])
@@ -152,3 +145,9 @@ for chat in st.session_state.chat_history:
         with st.expander("📚 Sources"):
             for idx, source in enumerate(chat["sources"]):
                 st.markdown(f"**Source {idx+1}**\n\n{source['content'][:500]}...")
+
+# === Display Summary Output ===
+if "doc_summary" in st.session_state:
+    st.markdown("---")
+    st.markdown("### 🧾 Document Summary")
+    st.markdown(st.session_state.doc_summary, unsafe_allow_html=False)
