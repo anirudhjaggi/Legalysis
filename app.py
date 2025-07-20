@@ -1,3 +1,11 @@
+import sys
+import importlib
+
+# Patch sqlite3 with pysqlite3
+import pysqlite3
+sys.modules["sqlite3"] = importlib.import_module("pysqlite3")
+
+
 import streamlit as st
 from Utils.Retriever import Retriever
 from Utils.LLM import RAGChatbot
