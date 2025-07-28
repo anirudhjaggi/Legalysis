@@ -1,7 +1,3 @@
-"""
-Example script showing how to use LangChain's TextLoader to load a .txt file
-"""
-
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 import traceback
