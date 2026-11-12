@@ -109,5 +109,42 @@
       ],
       "num_sources": 4
     }
+  ],
+  "20261108121859": [
+    {
+      "question": "what all IPC laws are applicable for murder",
+      "answer": "### 1. Summary\nUnder the Indian Penal Code (IPC), the offence of murder is primarily defined under **Section 300** and punished under **Section 302**. It is legally treated as an aggravated form of **culpable homicide (Section 299)**, and any charge of murder is subject to the **General Exceptions** under Chapter IV (Sections 76–106).\n\n---\n\n### 2. Relevant IPC Sections\n\n#### A. Core Sections Governing Murder (Covered in Context & Law)\n* **Section 299 (Culpable Homicide):** Defines the base offence of causing death by doing an act with the intention of causing death, intention of causing bodily injury likely to cause death, or knowledge that the act is likely to cause death. All murders are culpable homicides, but not all culpable homicides are murder.\n* **Section 300 (Murder):** Lays down the specific conditions under which culpable homicide becomes \"murder\" (such as an act done with the clear intention of causing death). It also contains specific exceptions where a killing is reduced to \"culpable homicide not amounting to murder\" (e.g., grave and sudden provocation, heat of passion, or excess of private defence).\n* **Section 6 & Chapter IV (Sections 76–106) (General Exceptions):** By virtue of Section 6, the definition of murder is subject to general exceptions (such as self-defence, unsoundness of mind, or accident). If an exception applies, it can completely exonerate the accused, but the burden of proving an exception lies on the accused.\n\n---\n\n*(Note: The following sections rely on **general Indian legal knowledge**, as the provided context focuses primarily on Sections 299, 300, and Chapter IV.)*\n\n#### B. Punishments and Related Offences (General Legal Knowledge)\n* **Section 302 (Punishment for Murder):** Prescribes the punishment for committing murder — either **death** or **imprisonment for life**, along with a fine.\n* **Section 304 (Punishment for Culpable Homicide Not Amounting to Murder):** Applies when an act causes death under one of the exceptions listed in Section 300 (punishable with imprisonment for life or up to 10 years, plus fine).\n* **Section 307 (Attempt to Murder):** Punishes acts done with the intention or knowledge of committing murder if the victim survives.\n* **Section 301 (Transfer of Malice):** Applies when an accused intends to kill one person but mistakenly causes the death of another.\n* **Section 34 / Section 120B (Common Intention / Criminal Conspiracy):** Frequently applied alongside Section 302 when multiple persons jointly plan or commit a murder.\n\n---\n\n### 3. Explanation\n\n* **The Genus and the Species:** In Indian criminal law, culpable homicide (Section 299) is the broader category (genus), while murder (Section 300) is a specific, more severe form (species). A court must first determine whether an act amounts to culpable homicide before deciding if it qualifies as murder.\n* **Two Kinds of Defences:**\n  1. **Specific Exceptions under Section 300:** If an accused person kills someone under grave and sudden provocation or in the heat of a sudden fight, the charge is reduced from murder (punishable under Section 302) to culpable homicide not amounting to murder (punishable under Section 304).\n  2. **General Exceptions (Chapter IV):** Defences such as the right of private defence (self-defence), infancy, or mental illness can make the act a non-offence entirely.\n* **Burden of Proof:** While the prosecution must prove the elements of murder beyond reasonable doubt, the accused bears the burden of proving that their act falls within any of the general or special exceptions.\n\n---\n\n### 4. Caveats / Additional Notes\n\n* **Statutory Transition:** Please note that India has enacted the *Bharatiya Nyaya Sanhita, 2023 (BNS)*, which replaces the Indian Penal Code, 1860 for offences committed on or after July 1, 2024 (where murder is defined under Section 101 and punished under Section 103). IPC remains applicable to offences committed prior to this date.\n* **Legal Disclaimer:** This information is provided for educational purposes and does not constitute formal legal advice. For specific legal issues or ongoing cases, consult a qualified advocate.",
+      "sources": [
+        {
+          "content": "COMMENT—\nThe \"general exceptions\" enacted by Indian Penal Code, 1860 (IPC, 1860) are of universal application and for the sake of brevity of expression, instead of repeating in every section that the definition is to be taken subject to the exceptions, the legislature by section 6 IPC, 1860 enacted that all the definitions must be regarded as subject to the general exceptions. Therefore, general exceptions are part of the definition of every offence contained in IPC, 1860, but the burden to prove their existence lies on the accused.1.",
+          "metadata": {
+            "id": "doc_69",
+            "score": 33.04440689086914
+          }
+        },
+        {
+          "content": "The academic distinction between 'murder' and 'culpable homicide not amounting to murder' has vexed the Courts for more than a century. The confusion is caused, if Courts losing sight of the true scope and meaning of the terms used by the legislature in these sections allow themselves to be drawn into minute abstractions. The safest way of approach to the interpretation and application of these provisions seems to be keeping in focus the key words used in the various clauses of sections 299 and 300. The following comparative table will be helpful in appreciating the points of distinction between the two offences.\nSection 299\tSection 300\nA person commits culpable homicide if the act Subject to certain exceptions, culpable\nby which the death is caused is done -\nINTENTION\nhomicide is murder if the act by which the death is caused is done -\n(a) with the intention of causing death; or\t(1) with the intention of causing death; or",
+          "metadata": {
+            "id": "doc_2578",
+            "score": 33.668392181396484
+          }
+        },
+        {
+          "content": "THE INDIAN PENAL CODE\nCHAPTER IV GENERAL EXCEPTIONS\nTHIS chapter has been framed in order to obviate the necessity of repeating in every penal clause a considerable number of limitations.\nThe word 'offence' in this chapter denotes a thing punishable under the Code or under any special or local law when it satisfied the conditions laid down in section 40 of the Code.\nThe \"general exceptions\" contained in sections 76–106 make an offence a non-offence. The \"general exceptions\" enacted by Indian Penal Code, 1860 (IPC, 1860) are of universal application and for the sake of brevity of expression, instead of repeating in every section that the definition is to be taken subject to the exceptions, the Legislature by section 6 IPC, 1860 enacted that all the definitions must be regarded as subject to the general exceptions. Therefore, general exceptions are part of definition of every offence contained in IPC, 1860, but the burden to prove their existence lied on the accused.1.",
+          "metadata": {
+            "id": "doc_783",
+            "score": 34.00669860839844
+          }
+        },
+        {
+          "content": "THE INDIAN PENAL CODE\nCHAPTER IV GENERAL EXCEPTIONS\nTHIS chapter has been framed in order to obviate the necessity of repeating in every penal clause a considerable number of limitations.\nThe word 'offence' in this chapter denotes a thing punishable under the Code or under any special or local law when it satisfied the conditions laid down in section 40 of the Code.\nThe \"general exceptions\" contained in sections 76–106 make an offence a non-offence. The \"general exceptions\" enacted by Indian Penal Code, 1860 (IPC, 1860) are of universal application and for the sake of brevity of expression, instead of repeating in every section that the definition is to be taken subject to the exceptions, the Legislature by section 6 IPC, 1860 enacted that all the definitions must be regarded as subject to the general exceptions. Therefore, general exceptions are part of definition of every offence contained in IPC, 1860, but the burden to prove their existence lied on the accused.1.",
+          "metadata": {
+            "id": "doc_1053",
+            "score": 34.00669860839844
+          }
+        }
+      ],
+      "num_sources": 4
+    }
   ]
 }

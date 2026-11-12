@@ -55,7 +55,7 @@ class LegalChatbotOrchestrator:
             "batch_size": 1000,
             
             # LLM settings
-            "llm_model": "gemini-1.5-flash",
+            "llm_model": "gemini-3.8-flash",
             "temperature": 0.5,
             "max_tokens": 10000,
             

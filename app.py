@@ -1,10 +1,9 @@
-import sys
-import importlib
+# import sys
+# import importlib
 
-# Patch sqlite3 with pysqlite3
-import pysqlite3
-sys.modules["sqlite3"] = importlib.import_module("pysqlite3")
-
+# # Patch sqlite3 with pysqlite3
+# import pysqlite3
+# sys.modules["sqlite3"] = importlib.import_module("pysqlite3")
 
 import streamlit as st
 from Utils.Retriever import Retriever
@@ -90,7 +89,7 @@ def load_chatbot():
     )
     chatbot = RAGChatbot(
         retriever=retriever,
-        model_name="gemini-1.5-flash",
+        model_name="gemini-3.8-flash",
         temperature=temperature,
         max_tokens=max_tokens
     )
@@ -157,5 +156,5 @@ for chat in st.session_state.chat_history:
 # === Display Summary Output ===
 if "doc_summary" in st.session_state:
     st.markdown("---")
-    st.markdown("### 🧾 Document Summary")
+    st.markdown("### 🧾 Judgement Summary")
     st.markdown(st.session_state.doc_summary, unsafe_allow_html=False)

@@ -22,7 +22,7 @@ class RAGChatbot:
     def __init__(
         self,
         retriever,  # Must have a .retrieve() method
-        model_name: str = "gemini-1.5-flash",
+        model_name: str = "gemini-3.8-flash",
         temperature: float = 0.5,
         max_tokens: int = 10000
     ):
